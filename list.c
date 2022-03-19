@@ -40,6 +40,8 @@ void * firstList(List * list) {
   if (list->current != NULL){
     list->current = list->head;
   }
+  else 
+    return NULL;
   return list->current->data;
 }
 
