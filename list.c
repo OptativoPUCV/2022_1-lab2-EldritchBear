@@ -70,16 +70,16 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  Node * keshu = createNode(data);
+  Node * kenshi = createNode(data);
   if (list->head != NULL){
-    keshu->next = list->head;
-    list->head->prev = keshu;
-    list->head = keshu;
+    kenshi->next = list->head;
+    list->head->prev = kenshi;
+    list->head = kenshi;
   }
   if (list->head == NULL){
-    list->head = keshu;
-    list->tail = keshu;
-    list->current = keshu;
+    list->head = kenshi;
+    list->tail = kenshi;
+    list->current = kenshi;
   }
 }
 
@@ -89,6 +89,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  
 }
 
 void * popFront(List * list) {
