@@ -178,3 +178,13 @@ Sat Mar 19 20:26:02 UTC 2022:
  tests:  10|2
 total_score: 45/70
 b8651c5
+Sat Mar 19 20:29:14 UTC 2022: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+list.c: In function ‘pushCurrent’:
+list.c:96:5: error: expected ‘;’ before ‘list’
+     list->current->next = sopaipilla;
+     ^~~~
+Compilation failed
+f6e08d6
