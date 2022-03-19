@@ -125,3 +125,24 @@ Sat Mar 19 20:09:20 UTC 2022:
  tests:  10|2
 total_score: 45/70
 b3d3e91
+Sat Mar 19 20:18:41 UTC 2022: 
+ list.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘pushBack’:
+list.c:87:35: error: ‘return’ with a value, in function returning void [-Werror]
+   if(list->current == NULL)return NULL;
+                                   ^~~~
+list.c:86:6: note: declared here
+ void pushBack(List * list, void * data) {
+      ^~~~~~~~
+list.c: In function ‘pushCurrent’:
+list.c:93:35: error: ‘return’ with a value, in function returning void [-Werror]
+   if(list->current == NULL)return NULL;
+                                   ^~~~
+list.c:92:6: note: declared here
+ void pushCurrent(List * list, void * data) {
+      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+87939a7
