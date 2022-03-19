@@ -84,19 +84,17 @@ void pushFront(List * list, void * data) {
 }
 
 void pushBack(List * list, void * data) {
-  //if(list->current == NULL)return NULL;
   list->current = list->tail;
   pushCurrent(list,data);
 }
 
 void pushCurrent(List * list, void * data) {
-  //if(list->current == NULL)return NULL;
   Node * sopaipilla = createNode(data);
-  if (list->head != NULL){
+  if (list->current != NULL){
     list->current->next->prev = sopaipilla->next;
     list->current->next = sopaipilla->prev;
   }
-  if (list->head == NULL){
+  if (list->current == NULL){
     list->head = sopaipilla;
     list->tail = sopaipilla;
     list->current = sopaipilla;
