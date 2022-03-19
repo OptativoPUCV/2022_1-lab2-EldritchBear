@@ -91,8 +91,8 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node * sopaipilla = createNode(data);
   if (list->current != NULL){
-    list->current->next->prev = sopaipilla->next;
-    list->current->next = sopaipilla->prev;
+    sopaipilla->next = list->current->next;
+    list->current->next = sopaipilla;
   }
   if (list->current == NULL){
     list->head = sopaipilla;
