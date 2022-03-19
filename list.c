@@ -76,6 +76,10 @@ void pushFront(List * list, void * data) {
     list->head->prev = keshu;
     list->head = keshu;
   }
+  if (list->head == NULL){
+    list->head = list->current->prev;
+    list->current->next = NULL;
+  }
 }
 
 void pushBack(List * list, void * data) {
