@@ -142,6 +142,12 @@ void * popCurrent(List * list) {
     free(list->current);
     return cepillo;
   }
+
+  if(list->current->next == NULL){
+    list->current->prev = NULL;
+    free(list->current);
+    return cepillo;
+  }
   
   if (list->head == NULL) return NULL;
   
