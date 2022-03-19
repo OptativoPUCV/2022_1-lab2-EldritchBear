@@ -128,6 +128,7 @@ void * popCurrent(List * list) {
     list->current->prev = list->current->next;
     list->current->next = list->current->prev;
     free(list->current);
+    return(cepillo);
   }
   
   if (list->head == list->current){
