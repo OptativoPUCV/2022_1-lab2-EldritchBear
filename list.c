@@ -124,7 +124,7 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   void * cepillo = list->current->data;
 
-  if (list->head != NULL){
+  if (list->current != NULL){
     list->current->prev = list->current->next;
     list->current->next = list->current->prev;
     free(list->current);
