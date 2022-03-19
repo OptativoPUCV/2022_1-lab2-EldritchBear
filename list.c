@@ -96,6 +96,13 @@ void pushCurrent(List * list, void * data) {
     list->current->next = sopaipilla;
     sopaipilla->prev = list->current;
   }
+
+  if (list->current->next == NULL){
+    list->current->next = sopaipilla;
+    list->tail = sopaipilla;
+    sopaipilla->prev = list->current;
+  }
+  
   if (list->current == NULL){
     list->head = sopaipilla;
     list->tail = sopaipilla;
