@@ -90,7 +90,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  if(list->current == NULL)return NULL;
+  //if(list->current == NULL)return NULL;
   Node * sopaipilla = createNode(data);
   if (list->head != NULL){
     list->current->next->prev = sopaipilla->next;
