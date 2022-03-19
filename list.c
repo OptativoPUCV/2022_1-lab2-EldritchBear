@@ -122,7 +122,29 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  void * cepillo = list->current->data;
+
+  if (list->head != NULL){
+    list->current->prev = list->current->next;
+    list->current->next = list->current->prev;
+    free(list->current);
+  }
+  
+  if (list->head == list->current){
+    list->current->next = list->head;
+    free(list->current);
+    return cepillo;
+  }
+
+  if (list->current == list->tail){
+    list->current->prev = list->tail;
+    free(list->current);
+    return cepillo;
+  }
+  
+  if (list->head == NULL) return NULL;
+  
+  return cepillo;
 }
 
 void cleanList(List * list) {
