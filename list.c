@@ -77,8 +77,9 @@ void pushFront(List * list, void * data) {
     list->head = keshu;
   }
   if (list->head == NULL){
-    list->head->next = list->current->prev;
-    list->current->next = NULL;
+    list->head = keshu;
+    list->tail = keshu;
+    list->current = keshu;
   }
 }
 
