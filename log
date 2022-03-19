@@ -1,0 +1,16 @@
+Sat Mar 19 19:30:54 UTC 2022: 
+ list.c | 26 +++++++++++++++++++++-----
+ 1 file changed, 21 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘firstList’:
+list.c:40:25: error: ‘List {aka struct List}’ has no member named ‘Head’; did you mean ‘head’?
+   list->current = list->Head;
+                         ^~~~
+                         head
+list.c: In function ‘nextList’:
+list.c:45:21: error: ‘Node {aka struct Node}’ has no member named ‘Next’; did you mean ‘next’?
+   if(list->current->Next != NULL)
+                     ^~~~
+                     next
+Compilation failed
+0fe323e
