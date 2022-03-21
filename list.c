@@ -124,7 +124,7 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   void * shampoo = list->current->data;
 
-  if (list->current->next != NULL){
+  if (list->current->next != list->tail){
     list->current->prev->next = list->current->next;
     list->current->next->prev = list->current->prev;
     free(list->current);
