@@ -270,3 +270,9 @@ list.c:140:34: error: ‘Node {aka struct Node}’ has no member named ‘list�
                                   ^~
 Compilation failed
 4e786d4
+Mon Mar 21 00:21:58 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|1
+total_score: 55/70
+8972a42
