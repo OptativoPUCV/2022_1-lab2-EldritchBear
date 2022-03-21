@@ -138,7 +138,7 @@ void * popCurrent(List * list) {
   }
 
   if (list->current == list->tail){
-    list->current->prev = list->tail;
+    list->tail->prev = list->tail;
     free(list->current);
     return shampoo;
   }
