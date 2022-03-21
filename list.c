@@ -139,13 +139,11 @@ void * popCurrent(List * list) {
     return shampoo;
   }
 
-  if (list->current == list->tail){
+  if (list->current->next == NULL){
     list->tail->prev = list->tail;
     free(list->current);
     return shampoo;
   }
-  
-  if (list->head == NULL) return NULL;
   
   return shampoo;
 }
