@@ -132,7 +132,7 @@ void * popCurrent(List * list) {
   }
   
   if (list->current->prev == NULL){
-    list->current->next->prev = list->current->prev;
+    list->head = list->head->next;
     free(list->current);
     return shampoo;
   }
